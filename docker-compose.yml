@@ -1,0 +1,22 @@
+version: '3'
+services:
+  php-apache:
+    build: ./php-apache
+    ports:
+      - 5000:80
+    volumes:
+      - ./src:/var/www/html
+    links:
+      - 'mariadb'
+
+  mariadb:
+    image: mariadb:10.5
+    volumes:
+      - mariadb:/var/lib/mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: "greenhammer"
+      MYSQL_DATABASE: 'testdb'
+      MYSQL_USER: 'testuser'
+      MYSQL_PASSWORD: 'testpassword'
+volumes:
+  mariadb:
