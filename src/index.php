@@ -6,12 +6,29 @@
   <title>LAMP Stackers</title>
   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <link rel="icon" href="./includes/img/bulbicon.png" type="image/png">
+
   <style>
-    
+    .parallax-container {
+      height: 500px;
+    }
+
+    body {
+      background-color: #B8C4DA;
+    }
+
+    #header {
+      color: white;
+      position: absolute;
+      z-index: 1000;
+      top: 200px;
+      left: 200px
+    }
   </style>
+
 </head>
 <body>
-  <nav class="nav-wrapper blue lighten-2 right-align">
+  <nav class="nav-wrapper blue lighten-1 right-align">
     <div class="container blue-text text-darken-2">
       <a href="#" class="sidenav-trigger" data-target="mobile-links">
         <i class="material-icons">menu</i>
@@ -20,6 +37,7 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#">Sign In</a></li>
       </ul>
     </div>
   </nav>
@@ -28,10 +46,20 @@
         <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
+        <li><a href="#">Sign In</a></li>
   </ul>
 
+  
+
+  <div class="parallax-container">
+      <div class="parallax"><img src="./includes/img/railpic.jpeg"></div>
+  </div>
+
+  <h3 id="header">Welcome to LAMP Stackers!<br></h3>
+  
   <div class="container center-align">
-    <h3>Welcome to LAMP Stackers!<br></h1>
+    
+
     <div class="row center-align">
       <?php
         $sql = "SELECT * FROM lamp;";
@@ -41,11 +69,11 @@
         if($resultCheck > 0) {
           while($row = mysqli_fetch_assoc($result)) {
             echo '<div class= "col s12 l4">';
-            echo '<blockquote class="' . $row['color'] . '-text text-lighten-2">' . 'Lamp ' . $row['id'] . 
+            echo '<blockquote class="' . $row['color'] . '-text text-darken-3">' . 'Lamp ' . $row['id'] . 
             ' is ' . $row['color'] . ' and priced at $' . $row['price'] . '</blockquote><br>';
             
 
-            echo '<div class="card blue-grey darken-1">';
+            echo '<div class="card large green lighten-3">';
             echo '  <div class="card-image">';
             echo '    <img src="' . $row['image'] . '" alt="' . $row['color'] . ' lamp">';
             echo '  </div>';
@@ -70,5 +98,11 @@
       $('.sidenav').sidenav();
     })
   </script>
+  <script>
+    $(document).ready(function(){
+      $('.parallax').parallax();
+    });
+  </script>
+
 </body>
 </html>
