@@ -1,0 +1,40 @@
+.parallax-container {
+    height: 500px;
+}
+
+body {
+    background-image: url(../img/forestbackground.jpg);
+    background-size: cover;
+}
+
+.login {
+    margin-top: 150px;
+}
+
+.login .card {
+    background: rgba(0, 0, 0, .5);
+    color: #D1D1D1;
+}
+
+.login label {
+    font-size: 15px;
+    
+}
+
+.login input{
+    font-size: 15px;
+    color: #D1D1D1;
+}
+
+::-webkit-input-placeholder {
+    color: #9E9E9E;
+}
+
+.login h3{
+    font-size: 25px;
+}
+
+button {
+    font-size: 15px;
+    
+}

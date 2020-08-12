@@ -34,19 +34,18 @@
         <i class="material-icons">menu</i>
       </a>
       <ul class="right hide-on-med-and-down">
-        <li><a href="#">Home</a></li>
+        
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Sign In</a></li>
+        <li><a href="./login.php">Sign In</a></li>
       </ul>
     </div>
   </nav>
 
   <ul class="sidenav" id="mobile-links">
-        <li><a href="#">Home</a></li>
         <li><a href="#">About</a></li>
         <li><a href="#">Contact</a></li>
-        <li><a href="#">Sign In</a></li>
+        <li><a href="./login.php">Sign In</a></li>
   </ul>
 
   
